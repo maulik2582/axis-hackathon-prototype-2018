@@ -1,0 +1,316 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>:: Hackathon ::</title>
+
+    <link href='images/favicon.png' rel='shortcut icon'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <div class="Logo">Free Soul's Voice Enabled Access Prototype</div>
+
+    <div class="DashboardBox">
+
+
+        <div class="DashboardHeader">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-left">
+                    <span class="">Welcome, Banking User (A/c. No - 123456789)</span>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-left">
+                    <a class="BtnVoiceVerification pull-right" data-toggle="modal" href="#" data-target="#VoiceVerification"><i class="fa fa-microphone"></i> Opt For Voice Verification</a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-left">
+                    <a class="BtnVoiceVerification pull-right " href="#" data-toggle="modal" data-target="#PayNow"><i class="fa fa-money"></i> Pay Now</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <img src="~/Content/VI_script/images/Dashboard_Small.png" usemap="#Map"/>
+             
+                <map name="Map">
+                    <area shape="rect" coords="905,56,973,87" href="Login.html">
+                </map>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+    <div id="PayNow" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pay Now</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <label>Select  Payee</label>
+                                <select class="form-control">
+                                    <option>Dummy Account - A/c. 123456</option>
+                                    <option>Dummy Account - A/c. 123456</option>
+                                    <option>Dummy Account - A/c. 123456</option>
+                                    <option>Dummy Account - A/c. 123456</option>
+                                </select>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="vGap25"></div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <label>Enter Amount</label>
+                                <input type="text" class="form-control" placeholder="Enter Amount">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                <div class="vGap25"></div>
+                                <label>Record Verification Phrase</label>
+                                <div class="vGap10"></div>
+                                <a href="#" class="RecordIcon"> <i class="fa fa-microphone fa-5x"></i> </a>
+                                <div class="vGap25"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+
+                                <a class="btn_disabled" href="#"> Pay Now <i class="fa fa-angle-right"></i></a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="VoiceVerification" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="selectphrase">
+
+                        <div class="form-group-lg text-center">
+                            <h4 class="text-center">Select a phrase to use as "Voice Login" </h4>
+                            <div class="vGap10"></div>
+                            <ul class="phraselist">
+                                <li>My voice is stronger then a password.</li>
+                                <li>My voice is stronger then a password.</li>
+                                <li>My voice is stronger then a password.</li>
+                                <li>My voice is stronger then a password.</li>
+                                <li>My voice is stronger then a password.</li>
+                                <li>My voice is stronger then a password.</li>
+
+                            </ul>
+
+
+
+                        </div>
+
+
+
+                        <div class="form-group text-center">
+
+                            <a class="btn_green" href="#" id="btn_SelectPharse"> Select Pharse <i class="fa fa-angle-right"></i></a>
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="recordphrase" style="display:none;">
+
+                        <div class="form-group-lg text-center">
+                            <h4 class="text-center">Record Selected Voice Phrase 3 Times </h4>
+
+                            <span class="hint" id="hint">My voice is stronger then a password.</span>
+                            <div class="vGap10"></div>
+                            <a id="btn_ChangePharse" class="text_link" href="#"><i class="fa fa-reply"></i> Change Phrase</a>
+
+                            <div class="vGap25"></div>
+
+                            <a href="#" class="RecordIcon"> <i class="fa fa-microphone fa-5x"></i> </a>
+
+
+
+                            <ul class="RecordingStatus"><li><a href="#"><i class="fa fa-check-circle"></i></a></li> <li><a href="#"><i class="fa fa-play-circle-o"></i></a></li> <li><a href="#"><i class="fa fa-play-circle-o"></i></a></li> </ul>
+
+                            <div class="vGap25"></div>
+                        </div>
+
+                        <hr />
+
+
+                        <div class="form-group text-center">
+
+                            <span class="btn_green" href="" id="VerificationStatus"> Verification Successful <i class="fa fa-angle-right"></i></span>
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <!--<script src="js/modernizr.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+
+
+
+
+    <script>
+$(document).ready(function(){
+ $('.phraselist li').click(function(){
+
+$('.phraselist li').removeClass('selected');
+	$(this).addClass('selected');
+
+    return false;
+    });
+
+
+
+
+
+
+
+ $('#btn_SelectPharse').click(function(){
+
+$('#selectphrase').hide();
+$('#recordphrase').show();
+
+
+    return false;
+    });
+
+
+ $('#btn_ChangePharse').click(function(){
+
+$('#recordphrase').hide();
+$('#selectphrase').show();
+
+
+    return false;
+    });
+
+
+
+
+
+
+ $('.RecordIcon').click(function(){
+
+$(this).toggleClass('MicRecording');
+
+    return false;
+    });
+
+	 $('.RecordingStatus li a').click(function(){
+
+$('.RecordIcon').toggleClass('MicRecording');
+
+    return false;
+    });
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script>
+$(function() {
+	$('.LoginBox .column').matchHeight({
+    byRow: true,
+    property: 'height',
+    target: null,
+    remove: false
+});
+});
+    </script>
+
+
+
+
+</body>
+</html>

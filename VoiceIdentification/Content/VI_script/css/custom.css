@@ -1,0 +1,251 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,700,900');
+
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body { margin:0px;  background:#800a42  url(../images/page_bg_2.jpg) no-repeat; background-size:cover; font-family: 'Muli', sans-serif;  font-weight:400;}
+
+.Logo { margin:0 auto; position:fixed; width:600px; background:#FFF; color:#000; text-align:center; padding:10px; border-radius:0 0 6px 6px; left:50%; margin-left:-300px; font-weight:bold; box-shadow:0 0 10px rgba(0,0,0,0.5);	 }
+
+.weight300 {font-weight:300;}
+.weight400 {font-weight:400;}
+.weight500 {font-weight:500;}
+.weight700 {font-weight:700;}
+.weight900 {font-weight:900;}
+
+.vGap10{ height:10px; display:block;}
+.vGap25 { height:25px; display:block;}
+.vGap50 { height:50px; display:block;}
+.vGap75 { height:75px; display:block;}
+.vGap100 { height:100px; display:block;}
+
+
+
+h2 { display:block; text-align:left; margin:10px 0; padding:10px 0; border-bottom:solid 2px #00000005; font-weight:500;}
+h3 { line-height:150%;  font-weight:600;}
+
+.LoginBox { background:#F1F1EF; width:80%;  position:fixed; z-index:1; left:50%; top:100px; margin:auto auto auto -40%; box-shadow:0 0 50px #00000050;}
+
+.LoginBox form input[type="text"] { margin-bottom:15px; padding:30px 20px; font-size:20px; border:0px; border-bottom:solid 2px #D6D6D6; box-shadow:0 5px 10px rgba(0,0,0,0.05);  }
+
+.LoginBox .left, .LoginBox .right  { padding:50px; min-height:500px;}
+.LoginBox .right { background:#5A0442;}
+
+.LoginBox .OR { position:absolute; top:50%; right:-35px; width:40px; height:40px; background:#F1F1EF; display:inline-block; z-index:2; border-radius:10px; padding:10px; margin-top:-20px;  }
+
+.LoginBox .NewUser  { position:absolute; bottom:25px; left:30px; background:#F1F1EF; display:inline-block; z-index:2; border-radius:10px; padding:10px; margin-top:-20px;  }
+
+
+.LoginBox .right .icon2 { margin:25px auto; display:inline-block; color:#FFF;  width:100px; height:100px; border-radius:50px; padding:25px; position:relative; z-index:1;}
+.LoginBox .right .icon { margin:25px auto; display:inline-block; color:#FFF;  width:100px; height:100px; border-radius:50px; background:#F30; padding:25px; position:relative; z-index:1;}
+.LoginBox .right:hover .icon:after { content:' '; display:inline-block; position:absolute; top:0; left:0;  width:100px; height:100px;  border-radius:50px;  background:none; border:solid 5px #FFF;  -webkit-transition: all 1s; /* Safari */
+    transition: all 1s; z-index:0; animation-iteration-count:infinite;   animation-name: grow;
+    animation-duration: 1s;}
+.LoginBox .right a {text-decoration:none;}
+.LoginBox .right span { text-decoration:none; color:#EEE; font-size:22px; display:block; padding:0 10px;}
+.LoginBox .right span:hover { color:#FFFFFF; text-decoration:none;}
+
+.LoginBox h2 { padding-left:50px; padding-bottom:20px;}
+
+
+.RegistrationBox{ background:#F1F1EF; width:50%;  position:fixed; z-index:1; left:50%; top:200px; margin:auto auto auto -25%; box-shadow:0 0 50px #00000050;}
+
+.RegistrationBox form input[type="text"] { margin-bottom:10px; padding:20px 20px; font-size:18px; border:0px; border-bottom:solid 2px #D6D6D6; box-shadow:0 5px 10px rgba(0,0,0,0.05);  }
+.RegistrationBox .left, .RegistrationBox .right  { padding:50px; min-height:500px;}
+.RecordingStatus { margin:10px auto; padding:0; text-align:center;}
+.RecordingStatus li { display:inline-block; list-style:none; margin:0 10px; font-size:18px;}
+.RecordingStatus li a { color:#C00;}
+.RecordingStatus li i.fa-check-circle { color:#4B8C15;}
+
+
+
+.phraselist { padding:10px 0;}
+.phraselist  li { padding:10px 40px; list-style:none; background:#FFF; border:solid 1px #DDD; margin:5px; position:relative; text-align:left; cursor:pointer; font-size:18px;   }
+.phraselist  li:before { position:absolute; left:15px; top:8px; content:"\f10c"; font-family:FontAwesome; font-size:18px; }
+
+.phraselist  li.selected { background:#4B8C15; color:#FFF;}
+.phraselist  li.selected:before {content:"\f192";}
+
+.hint { padding:15px 25px; text-align:center; color:#666; background:#FFF; display:block; margin-top:20px; border:solid 2px #FFD24D; font-weight:bold;}
+#recordphrase .hint{ font-size:18px; }
+.RecordIcon, .RecordIcon:hover, .RecordIcon:active, .RecordIcon:focus { display:inline-block; margin:15px auto; text-align:center; color:#000; }
+
+.MicRecording { color:#666; position:relative; -webkit-animation: MicRecordingColorChange 1s infinite; font-family:FontAwesome; /* Safari 4.0 - 8.0 */
+    animation: MicRecordingColorChange 1s infinite; }
+.MicRecording:before {content:"\f192"; position:absolute; top:0; left:50%; width:30px; margin-left:-15px; display:inline-block;  -webkit-animation: MicRecording 1s infinite; font-family:FontAwesome; /* Safari 4.0 - 8.0 */
+    animation: MicRecording 1s infinite; color:#C30; }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes MicRecordingColorChange {
+     0% {color:#468C00; }
+	 50% {color:#C30; ;}
+    100% {color:#468C00; }
+}
+
+@keyframes MicRecordingColorChange {
+     0% {color:#468C00; }
+	 50% {color:#C30;  }
+    100% {color:#468C00;}
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes MicRecording {
+     0% {transform:scale(10); opacity:0;}
+	 50% {transform:scale(7); opacity:0.5;}
+    100% {transform:scale(0); opacity:0;}
+}
+
+@keyframes MicRecording {
+    0% {transform:scale(10); opacity:0}
+	 50% {transform:scale(2); opacity:0.5;}
+    100% {transform:scale(0); opacity:0;}
+}
+
+
+
+
+.btn_green { background:#468C00; border-radius:7px; border:solid 2px #FFF; padding:10px 25px; font-size:22px; color:#FFF; text-align:center;  text-decoration:none !important;  display:inline-block; outline:none;}
+.btn_green:hover, .btn_green:active, .btn_green:focus   { color:#FFF; background:#2E5B00; transition:all 0.25s ease-in-out; }
+.btn_green:active { transform:scale(.95); }
+
+.btn_disabled { background:#DDD; border-radius:7px; border:solid 2px #FFF; padding:10px 25px; font-size:22px; color:#999; text-align:center;  text-decoration:none !important;  display:inline-block; outline:none;}
+.btn_disabled:hover, .btn_disabled:active, .btn_disabled:focus   { color:#999; background:#DDD; transition:all 0.25s ease-in-out; }
+.btn_disabled:active { transform:scale(1); }
+
+.text_link { text-decoration:none; color:#468C00;}
+.text_link:hover { color:#468C00;}
+
+
+.DashboardBox { background:#FFF; width:96%; height:100%;  position:relative; z-index:1; left:50%; top:100px; margin:auto auto auto -48%; box-shadow:0 0 50px #00000050; padding:0px;  }
+.DashboardBox img { max-width:100%;}
+
+.DashboardHeader { width:100%; max-width:1024px; background:#C11359; color:#FFF; margin:0px auto; padding:10px 20px; text-align:left;}
+.DashboardHeader a { color:#FFF;}
+
+.modalBackground { background:rgba(0,0,0,0.25); position:fixed; top:0; left:0; width:100%; height:100%; z-index:999; display:none;}
+#preloader {background:rgba(0,0,0,0.50); width:100%; height:100%; position:fixed; top:0; left:0; z-index:9999; display:none; }
+.loader {
+  height: 20px;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.loader--dot {
+  animation-name: loader;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  border: 2px solid white;
+}
+.loader--dot:first-child {
+  background-color: #8cc759;
+  animation-delay: 0.5s;
+}
+.loader--dot:nth-child(2) {
+  background-color: #8c6daf;
+  animation-delay: 0.4s;
+}
+.loader--dot:nth-child(3) {
+  background-color: #ef5d74;
+  animation-delay: 0.3s;
+}
+.loader--dot:nth-child(4) {
+  background-color: #f9a74b;
+  animation-delay: 0.2s;
+}
+.loader--dot:nth-child(5) {
+  background-color: #60beeb;
+  animation-delay: 0.1s;
+}
+.loader--dot:nth-child(6) {
+  background-color: #fbef5a;
+  animation-delay: 0s;
+}
+.loader--text {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  color:#FFF;
+  text-align:center;
+}
+.loader--text:after {
+ /* content: "Loading";*/
+  font-weight: 100;
+  animation-name: loading-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(230px);
+  }
+  65% {
+    transform: translateX(230px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: "Loading";
+  }
+  25% {
+    content: "Loading.";
+  }
+  50% {
+    content: "Loading..";
+  }
+  75% {
+    content: "Loading...";
+  }
+}
+
+
+@media (max-width: 1920px) {
+	.LoginBox { width:50%; top:100px; margin:auto auto auto -25%; } 
+	.RegistrationBox { width:80%; top:100px; margin:auto auto auto -40%; }
+	}
+
+@media (max-width: 1600px) {
+	
+	.LoginBox { width:60%; top:100px; margin:auto auto auto -30%; } 
+	.RegistrationBox { width:80%; top:100px; margin:auto auto auto -40%; }
+	.RegistrationBox form input[type="text"] {font-size:16px; margin-bottom:0px; height:30px;}
+	}
+
+
+@media (max-width: 1400px) {
+	.LoginBox { width:60%; top:100px; margin:auto auto auto -30%; } 
+	.RegistrationBox { width:80%; top:100px; margin:auto auto auto -40%; }
+	.RegistrationBox .left, .RegistrationBox .right { padding:20px 50px;}
+	
+	}
+	
+	@media (max-width: 1366px) {
+	.LoginBox { width:70%; top:75px; margin:auto auto auto -35%; } 
+	.RegistrationBox { width:80%; top:75px; margin:auto auto auto -40%; }
+	li {font-size:16px !important;}
+	.DashboardBox  { top:75px;}
+	
+	}
