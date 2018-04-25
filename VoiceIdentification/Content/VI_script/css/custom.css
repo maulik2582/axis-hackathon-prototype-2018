@@ -28,7 +28,7 @@ h3 { line-height:150%;  font-weight:600;}
 
 .LoginBox { background:#F1F1EF; width:80%;  position:fixed; z-index:1; left:50%; top:100px; margin:auto auto auto -40%; box-shadow:0 0 50px #00000050;}
 
-.LoginBox form input[type="text"] { margin-bottom:15px; padding:30px 20px; font-size:20px; border:0px; border-bottom:solid 2px #D6D6D6; box-shadow:0 5px 10px rgba(0,0,0,0.05);  }
+.LoginBox form input[type="text"], .LoginBox form input[type="password"] { margin-bottom:15px; padding:30px 20px; font-size:20px; border:0px; border-bottom:solid 2px #D6D6D6; box-shadow:0 5px 10px rgba(0,0,0,0.05);  }
 
 .LoginBox .left, .LoginBox .right  { padding:50px; min-height:500px;}
 .LoginBox .right { background:#5A0442;}
@@ -52,7 +52,7 @@ h3 { line-height:150%;  font-weight:600;}
 
 .RegistrationBox{ background:#F1F1EF; width:50%;  position:fixed; z-index:1; left:50%; top:200px; margin:auto auto auto -25%; box-shadow:0 0 50px #00000050;}
 
-.RegistrationBox form input[type="text"] { margin-bottom:10px; padding:20px 20px; font-size:18px; border:0px; border-bottom:solid 2px #D6D6D6; box-shadow:0 5px 10px rgba(0,0,0,0.05);  }
+.RegistrationBox form input[type="text"], .RegistrationBox form input[type="password"], .RegistrationBox form input[type="email"], .RegistrationBox form input[type="tel"] { margin-bottom:10px; padding:20px 20px; font-size:18px; border:0px; border-bottom:solid 2px #D6D6D6; box-shadow:0 5px 10px rgba(0,0,0,0.05);  }
 .RegistrationBox .left, .RegistrationBox .right  { padding:50px; min-height:500px;}
 .RecordingStatus { margin:10px auto; padding:0; text-align:center;}
 .RecordingStatus li { display:inline-block; list-style:none; margin:0 10px; font-size:18px;}
